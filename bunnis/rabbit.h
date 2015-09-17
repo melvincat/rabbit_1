@@ -13,16 +13,21 @@
 #include <string>
 #include <iostream>
 #include "rabbit_attributes.h"
-
+#include "Random_Number.h"
 class rabbit{
     friend std::ostream& print_all(std::ostream& os, const rabbit& R);
     friend std::string sex_string(rabbit R);
     friend std::string colour_string(rabbit R);
+    friend std::string random_name(std::string sex);
 
 public:
     rabbit() = default;
     rabbit(rabbit_sex S, rabbit_colour C, int A, std::string N, bool V) :
     sex(S), colour(C), age(A), name(N), radioactive_mutant_vampire_bunny(V){};
+    
+    //generates a random rabbit
+    rabbit& random_rabbit(rabbit &temp);
+    
     rabbit& set_sex(rabbit_sex new_sew);
     rabbit& set_colour(rabbit_colour new_colour);
     rabbit& set_age(int new_age);
@@ -46,5 +51,6 @@ private:
 std::ostream& print_all(std::ostream& os, const rabbit& R);
 std::string sex_string(rabbit R);
 std::string colour_string(rabbit R);
+std::string random_name(std::string sex);
 
 #endif /* defined(__bunnis__rabbit__) */
