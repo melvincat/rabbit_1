@@ -19,6 +19,8 @@ class rabbit{
     friend std::string sex_string(rabbit R);
     friend std::string colour_string(rabbit R);
     friend std::string random_name(std::string sex);
+    
+    
 
 public:
     rabbit() = default;
