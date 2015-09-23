@@ -12,7 +12,7 @@
 #include "rabbit.h"
 #include "rabbit_attributes.h"
 #include "Random_Number.h"
-#include "IO.h"
+#include "writer.h"
 #include <fstream>
 void kill_half(std::vector<rabbit> & rab, const int numberBunnies)
 {
@@ -41,11 +41,10 @@ int main(int argc, const char * argv[]) {
     
     //create a vector, bunny_vec, holds rabbit objects
     std::vector<rabbit> bunny_vec;
-    IO io;
-    std::string message = "hello";
-    io.set_message(message);
-    io.write_string("/Users/nicholashilderson/Desktop/newone.txt");
     
+    writer write = writer(std::ofstream::app);
+    std::string str = "HELLO";
+    write.stream(str);
     //create firve rabbit objects, from the class rabbit
     for (int i = 0; i < 5; i++){
         rabbit temp;

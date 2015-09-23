@@ -10,6 +10,7 @@
 		D176EFE21BAA999500B881D5 /* Random_Number.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D176EFE01BAA999500B881D5 /* Random_Number.cpp */; };
 		D18BBD101BAA6FAF00FC041D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D18BBD0F1BAA6FAF00FC041D /* main.cpp */; };
 		D18BBD181BAA710600FC041D /* rabbit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D18BBD161BAA710600FC041D /* rabbit.cpp */; };
+		D1F6066E1BAE3A5100BBDB8A /* writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1F6066C1BAE3A5100BBDB8A /* writer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		D18BBD161BAA710600FC041D /* rabbit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rabbit.cpp; sourceTree = "<group>"; };
 		D18BBD171BAA710600FC041D /* rabbit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rabbit.h; sourceTree = "<group>"; };
 		D18BBD191BAA717D00FC041D /* rabbit_attributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rabbit_attributes.h; sourceTree = "<group>"; };
+		D1F6066C1BAE3A5100BBDB8A /* writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = writer.cpp; sourceTree = "<group>"; };
+		D1F6066D1BAE3A5100BBDB8A /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				D18BBD191BAA717D00FC041D /* rabbit_attributes.h */,
 				D176EFE01BAA999500B881D5 /* Random_Number.cpp */,
 				D176EFE11BAA999500B881D5 /* Random_Number.h */,
+				D1F6066C1BAE3A5100BBDB8A /* writer.cpp */,
+				D1F6066D1BAE3A5100BBDB8A /* writer.h */,
 			);
 			path = bunnis;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F6066E1BAE3A5100BBDB8A /* writer.cpp in Sources */,
 				D18BBD101BAA6FAF00FC041D /* main.cpp in Sources */,
 				D18BBD181BAA710600FC041D /* rabbit.cpp in Sources */,
 				D176EFE21BAA999500B881D5 /* Random_Number.cpp in Sources */,
@@ -225,7 +231,7 @@
 		D18BBD141BAA6FAF00FC041D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION = 5.2;
+				GCC_VERSION = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -233,7 +239,7 @@
 		D18BBD151BAA6FAF00FC041D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION = 5.2;
+				GCC_VERSION = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
