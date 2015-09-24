@@ -43,9 +43,8 @@ int main(int argc, const char * argv[]) {
     std::vector<rabbit> bunny_vec;
     
     writer write = writer(std::ofstream::app);
-    std::string str = "HELLO";
-    write.stream(str);
-    //create firve rabbit objects, from the class rabbit
+
+        //create firve rabbit objects, from the class rabbit
     for (int i = 0; i < 5; i++){
         rabbit temp;
         //set these objects values
@@ -64,6 +63,9 @@ int main(int argc, const char * argv[]) {
         (x.get_sex() == rabbit_sex::male) ? ++male_count : ++female_count;
         if (x.get_radioactive_mutant_vampire_bunny() == false) ++radioactive_count;
         x.set_age(x.get_age() +1);
+        //create tempory vector as it is passed by reference
+        std::vector<std::string> temp_vec = x.rabbit_vector();
+        write.stream(temp_vec);
         
     }
         int i = 0;
