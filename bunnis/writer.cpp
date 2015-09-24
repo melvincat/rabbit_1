@@ -61,7 +61,7 @@ void writer::set_path()
 {
     //create a tempory path
     std::string tempPath;
-    std::cout << "Enter a path for the output" << std::endl;
+    std::cout << "Enter a path for the output:" << std::ends;
     //set the path
     do {
         //clear it if it hasn't already

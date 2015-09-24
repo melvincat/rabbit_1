@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
+#include <vector>
 #include "rabbit_attributes.h"
 #include "Random_Number.h"
 class rabbit{
@@ -41,6 +42,8 @@ public:
     int get_age() const {return age;};
     std::string get_name() const {return name;};
     bool get_radioactive_mutant_vampire_bunny() const {return radioactive_mutant_vampire_bunny;};
+    
+    std::vector<std::string> rabbit_vector();
 
 private:
     rabbit_sex sex = rabbit_sex::male;

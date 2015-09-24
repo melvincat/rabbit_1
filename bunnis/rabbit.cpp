@@ -8,6 +8,7 @@
 
 #include "rabbit.h"
 #include "Random_Number.h"
+#include <vector>
 rabbit& rabbit::set_sex(rabbit_sex new_sew){
     sex = new_sew;
     return *this;
@@ -46,7 +47,19 @@ std::ostream& print_all(std::ostream& os, const rabbit& R){
     << "Colour: " << colour_string(R) << "\n";
     return os;
 }
+std::vector<std::string> rabbit::rabbit_vector()
+{
+    std::vector<std::string> temp_vec;
+    
+    temp_vec.push_back("Name: " + name);
+    temp_vec.push_back("Colour: " + colour_string(*this));
+    temp_vec.push_back("Radioactive: " + std::to_string(radioactive_mutant_vampire_bunny));
+    temp_vec.push_back("Sex: " + sex_string(*this));
+    temp_vec.push_back("Age: " + std::to_string(age));
+    
+    return temp_vec;
 
+}
 std::string sex_string(rabbit R)
 {
     
