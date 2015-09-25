@@ -33,7 +33,7 @@ rabbit& rabbit::set_radioactive_mutant_vampire_bunny(bool new_vampie){
 rabbit& rabbit::random_rabbit(rabbit &temp)
 {
     temp.set_age(Random_Number(0, 10));
-    temp.set_colour(static_cast<rabbit_colour>(Random_Number(0, 4)));
+    temp.set_colour(static_cast<rabbit_colour>(Random_Number(0, 3)));
     temp.set_radioactive_mutant_vampire_bunny(Random_Number(0, 50));
     temp.set_sex(static_cast<rabbit_sex>(Random_Number(0, 1)));
     temp.set_name(random_name(sex_string(temp)));

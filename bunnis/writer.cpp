@@ -71,6 +71,7 @@ void writer::set_path()
         std::getline(std::cin, tempPath);
     
     } while (!valid_path(tempPath)); //loop till they enter a valid path
+    std::cout << std::flush;
     //if it is valid set the path of the object
     path = tempPath;
 }
