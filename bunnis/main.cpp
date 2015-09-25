@@ -59,6 +59,8 @@ int main(int argc, const char * argv[]) {
         //store these objects in the vector
         bunny_vec.push_back(temp);
     }
+    
+
     std::string open_string = "WELCOME TO RABBIT APP \n";
     write.stream(open_string);
     std::cout << bunny_vec.size() << std::ends;
@@ -82,23 +84,25 @@ int main(int argc, const char * argv[]) {
                 
                 if (x.get_radioactive_mutant_vampire_bunny() == false) ++radioactive_count;
                 //increate the age of each bunny by one
-                int new_age = x.get_age() +1;
+                int new_age = x.get_age();
+                ++new_age;
                 x.set_age(new_age);
-                
-                //if the age is ten kill the bunny (delete the vector member)
-                if (x.get_age() >= 10) bunny_vec.erase(iter);
                 
                 //create tempory vector as it is passed by reference
                 //rabbit vector is all the elements of the rabbit (age etc.) in string vector form
                 std::vector<std::string> temp_vec = x.rabbit_vector();
                 write.stream(temp_vec);
+                
+                //if the age is ten kill the bunny (delete the vector member)
+                if (x.get_age() >= 10) bunny_vec.erase(iter);
+
             }
         
             int i = 0;
             //go through all the elements in bunny_vec or if the number of female
             //bunnies is higher than the original
-            for (auto iter = bunny_vec.begin();
-                 iter != bunny_vec.end() && i <= female_count; ++iter)
+        for (auto iter = bunny_vec.begin();
+            iter != bunny_vec.end() && i <= female_count; ++iter)
             {
                 
                 //if the rabbit is a female and its age is above 2 and it is not a radioactive bunny
