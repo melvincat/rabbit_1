@@ -77,24 +77,25 @@ int main(int argc, const char * argv[]) {
         //for each member of bunny vec
         for (auto iter = bunny_vec.begin(); iter != bunny_vec.end(); ++iter)
             {
-                //this alius is for easier typing
-                auto x = *iter;
-                //if the bunny is male + 1 male count, or plus 1 female count
-                (x.get_sex() == rabbit_sex::male) ? ++male_count : ++female_count;
                 
-                if (x.get_radioactive_mutant_vampire_bunny() == false) ++radioactive_count;
+                //if the bunny is male + 1 male count, or plus 1 female count
+                (iter->get_sex() == rabbit_sex::male) ? ++male_count : ++female_count;
+                
+                if (iter->get_radioactive_mutant_vampire_bunny() == false) ++radioactive_count;
                 //increate the age of each bunny by one
-                int new_age = x.get_age();
-                ++new_age;
-                x.set_age(new_age);
+                iter->set_age(iter->get_age()+ 1);
                 
                 //create tempory vector as it is passed by reference
                 //rabbit vector is all the elements of the rabbit (age etc.) in string vector form
-                std::vector<std::string> temp_vec = x.rabbit_vector();
+                std::vector<std::string> temp_vec = iter->rabbit_vector();
                 write.stream(temp_vec);
                 
                 //if the age is ten kill the bunny (delete the vector member)
-                if (x.get_age() >= 10) bunny_vec.erase(iter);
+                if (iter->get_age() >= 10)
+                {
+                    bunny_vec.erase(iter);
+                    --iter;
+                }
 
             }
         
