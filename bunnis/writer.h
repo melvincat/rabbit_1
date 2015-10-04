@@ -20,13 +20,13 @@ public:
     
     
     void set_path();
-    void stream(std::string &string_out);
-    void stream(std::vector<std::string> &output_vec);
+    void stream(const std::string &string_out);
+    void stream(const std::vector<std::string> &output_vec);
     
 private:
     void set_variables();
     bool valid_path(std::string tempPath);
-    std::ostream & write(std::string &output, std::ostream & out);
+    std::ostream & write(const std::string &output, std::ostream & out);
     std::string path = "null";
     std::ostream::open_mode file_mode;
     int is_set_up = 0;

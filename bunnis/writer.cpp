@@ -37,13 +37,13 @@ void writer::set_variables()
         ++is_set_up;
     }
 }
-void writer::stream(std::string &string_out)
+void writer::stream(const std::string &string_out)
 {
     set_variables();
     std::ofstream output(path, file_mode);
     write(string_out, output);
 }
-void writer::stream(std::vector<std::string> &output_vec)
+void writer::stream(const std::vector<std::string> &output_vec)
 {
     set_variables();
     std::ofstream output(path, file_mode);
@@ -52,7 +52,7 @@ void writer::stream(std::vector<std::string> &output_vec)
         write(string_out, output);
     }
 }
-std::ostream & writer::write(std::string &output, std::ostream & out)
+std::ostream & writer::write(const std::string &output, std::ostream & out)
 {
     out << output << std::endl;
     return out;
